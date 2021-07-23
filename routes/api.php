@@ -24,6 +24,7 @@ Route::prefix('v1')->middleware('jwt')->group(function(){
     Route::post('me', 'App\Http\Controllers\Api\AuthController@me');
     Route::post('logout', 'App\Http\Controllers\Api\AuthController@logout');
     /**rotas da logica */
+    Route::apiResource('produto', 'App\Http\Controllers\ProdutosController');
 });
 
 Route::post('login', 'App\Http\Controllers\Api\AuthController@login');
