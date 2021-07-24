@@ -100,9 +100,27 @@ class ProdutosController extends Controller
      * @param  \App\Models\Produtos  $produtos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Produto $produto)
+    public function update(Request $request, $id)
     {
-        //
+        $produto = Produto::where("id", $id)->first();
+        $dados = $request->all();
+        try {
+            if($dados['imagem']){
+                if(Storage::exists($produto->imagem)){
+                    dd('imagem existe');
+                }else{
+                    dd('não existe');
+                }
+                //terminar lógica de atualização da imagem
+            }
+
+            $produto->update($dados);
+            return response()->json(['msg', 'produto alterado com sucesso', 'produto' => $produto]);
+        } catch (\Throwable $th) {
+            //throw $th;
+            dd($th);
+            return response()->json(['erro', 'algo deu errado :(']);
+        }
     }
 
     /**
