@@ -18,6 +18,7 @@ class ProdutosController extends Controller
     public function index(Request $request)
     {
         $filtro = '';
+        $produtos = [];
         switch ($request->has('categoria')) {
             case 'bolos':
                 $filtro = $request->categoria;
@@ -27,7 +28,8 @@ class ProdutosController extends Controller
                 break;
             
             default:
-                # code...
+                $produtos = Produto::paginate(3);
+                return response()->json($produtos, 200);
                 break;
         };
         $produtos = Produto::where('categoria', $filtro)->paginate(3);
@@ -60,7 +62,7 @@ class ProdutosController extends Controller
             Produto::create($dados);
         } catch (\Throwable $th) {
             //throw $th;
-            dd($th);
+            //dd($th);
             return response()->json($th);
         }
         return response()->json(['msg' => 'adicionado com sucesso']);
@@ -107,19 +109,18 @@ class ProdutosController extends Controller
         try {
             if($dados['imagem']){
                 if(Storage::exists($produto->imagem)){
-                    dd('imagem existe');
-                }else{
-                    dd('não existe');
+                    Storage::delete($produto->imagem);
+                    $nomeArquivo = File::constroiNomeArquivo($request->imagem);
+                    $caminho = File::upload($request->imagem, 'imgs', $nomeArquivo);
+                    $dados['imagem'] = $caminho;
                 }
-                //terminar lógica de atualização da imagem
             }
-
             $produto->update($dados);
-            return response()->json(['msg', 'produto alterado com sucesso', 'produto' => $produto]);
+            return response()->json(['msg', 'produto alterado com sucesso', 'produto' => $produto], 200);
         } catch (\Throwable $th) {
             //throw $th;
-            dd($th);
-            return response()->json(['erro', 'algo deu errado :(']);
+            //dd($th);
+            return response()->json(['erro', 'algo deu errado :('], 404);
         }
     }
 
