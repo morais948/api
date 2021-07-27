@@ -21,7 +21,7 @@ class ProdutoSeeder extends Seeder
                 'preco' => 15.50,
                 'quantidade' => 20,
                 'categoria' => 'bolos',
-                'imagem' => 'imgs/bolo1.png',
+                'imagem' => 'imgs_padrao/bolo-teste.png',
             ],
             [
                 'nome' => 'bolo de chocolate',
@@ -29,7 +29,7 @@ class ProdutoSeeder extends Seeder
                 'preco' => 12.50,
                 'quantidade' => 35,
                 'categoria' => 'bolos',
-                'imagem' => 'imgs/bolo2.png',
+                'imagem' => 'imgs_padrao/bolo-teste.png',
             ],
             [
                 'nome' => 'bolo de doce de leite',
@@ -37,7 +37,7 @@ class ProdutoSeeder extends Seeder
                 'preco' => 10.50,
                 'quantidade' => 15,
                 'categoria' => 'bolos',
-                'imagem' => 'imgs/bolo3.png',
+                'imagem' => 'imgs_padrao/bolo-teste.png',
             ],
             [
                 'nome' => 'bolo branco',
@@ -45,7 +45,7 @@ class ProdutoSeeder extends Seeder
                 'preco' => 35.70,
                 'quantidade' => 200,
                 'categoria' => 'bolos',
-                'imagem' => 'imgs/bolo4.png',
+                'imagem' => 'imgs_padrao/bolo-teste.png',
             ],
             [
                 'nome' => 'bolo napolinato',
@@ -53,7 +53,7 @@ class ProdutoSeeder extends Seeder
                 'preco' => 40,
                 'quantidade' => 36,
                 'categoria' => 'bolos',
-                'imagem' => 'imgs/bolo5.png',
+                'imagem' => 'imgs_padrao/bolo-teste.png',
             ],
             [
                 'nome' => 'bolo de nutela',
@@ -61,7 +61,7 @@ class ProdutoSeeder extends Seeder
                 'preco' => 25,
                 'quantidade' => 20,
                 'categoria' => 'bolos',
-                'imagem' => 'imgs/bolo6.png',
+                'imagem' => 'imgs_padrao/bolo-teste.png',
             ],
             [
                 'nome' => 'bolo da copa',
@@ -69,7 +69,7 @@ class ProdutoSeeder extends Seeder
                 'preco' => 10,
                 'quantidade' => 13,
                 'categoria' => 'bolos',
-                'imagem' => 'imgs/bolo7.png',
+                'imagem' => 'imgs_padrao/bolo-teste.png',
             ],
             [
                 'nome' => 'bolo de pote',
@@ -77,7 +77,7 @@ class ProdutoSeeder extends Seeder
                 'preco' => 12,
                 'quantidade' => 50,
                 'categoria' => 'bolos',
-                'imagem' => 'imgs/bolo8.png',
+                'imagem' => 'imgs_padrao/bolo-teste.png',
             ],
             [
                 'nome' => 'bolo de banana',
@@ -85,7 +85,7 @@ class ProdutoSeeder extends Seeder
                 'preco' => 8,
                 'quantidade' => 23,
                 'categoria' => 'bolos',
-                'imagem' => 'imgs/bolo9.png',
+                'imagem' => 'imgs_padrao/bolo-teste.png',
             ],
             [
                 'nome' => 'bolo verde',
@@ -93,7 +93,7 @@ class ProdutoSeeder extends Seeder
                 'preco' => 22,
                 'quantidade' => 18,
                 'categoria' => 'bolos',
-                'imagem' => 'imgs/bolo10.png',
+                'imagem' => 'imgs_padrao/bolo-teste.png',
             ],
             //salgados
             [
@@ -102,7 +102,7 @@ class ProdutoSeeder extends Seeder
                 'preco' => 5,
                 'quantidade' => 20,
                 'categoria' => 'salgados',
-                'imagem' => 'imgs/salgado1.png',
+                'imagem' => 'imgs_padrao/salgado-teste.png',
             ],
             [
                 'nome' => 'enroladinho',
@@ -110,7 +110,7 @@ class ProdutoSeeder extends Seeder
                 'preco' => 5,
                 'quantidade' => 18,
                 'categoria' => 'salgados',
-                'imagem' => 'imgs/salgado2.png',
+                'imagem' => 'imgs_padrao/salgado-teste.png',
             ],
             [
                 'nome' => 'pastel',
@@ -118,7 +118,7 @@ class ProdutoSeeder extends Seeder
                 'preco' => 5,
                 'quantidade' => 25,
                 'categoria' => 'salgados',
-                'imagem' => 'imgs/salgado3.png',
+                'imagem' => 'imgs_padrao/salgado-teste.png',
             ],
             [
                 'nome' => 'empada',
@@ -126,7 +126,7 @@ class ProdutoSeeder extends Seeder
                 'preco' => 5,
                 'quantidade' => 10,
                 'categoria' => 'salgados',
-                'imagem' => 'imgs/salgado4.png',
+                'imagem' => 'imgs_padrao/salgado-teste.png',
             ],
             [
                 'nome' => 'pastel de queijo',
@@ -134,7 +134,7 @@ class ProdutoSeeder extends Seeder
                 'preco' => 5,
                 'quantidade' => 32,
                 'categoria' => 'salgados',
-                'imagem' => 'imgs/salgado5.png',
+                'imagem' => 'imgs_padrao/salgado-teste.png',
             ],
         ];
 
